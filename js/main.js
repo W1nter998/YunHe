@@ -1,3 +1,7 @@
+// js/main.js
+// 这个脚本主要处理通用的UI逻辑，例如移动端菜单。
+// 它不依赖于Supabase，所以可以直接加载。
+
 document.addEventListener('DOMContentLoaded', () => {
     // 移动端菜单切换逻辑
     const menuToggle = document.querySelector('.menu-toggle');
