@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>注册账户 - 鋆赫财税</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="鋆赫财税 Logo">
+                </a>
+                <span>鋆赫财税</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="services.html">服务</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-primary">登录</a>
+                <a href="signup.html" class="btn btn-secondary">注册</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close-btn" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="services.html">服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="login.html">登录</a></li>
+            <li><a href="signup.html">注册</a></li>
+        </ul>
+    </div>
+
+    <main class="main">
+        <div class="auth-form-container">
+            <h1>注册账户</h1>
+            <p class="message" id="auth-message"></p>
+            <div id="supabase-status" style="font-size: 0.9em; margin-bottom: 10px; color: gray;">
+                <i class="fas fa-spinner fa-spin"></i> 正在加载核心组件...
+            </div>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="email"><span class="required">*</span> 邮箱:</label>
+                    <input type="email" id="email" placeholder="请输入您的邮箱" required />
+                </div>
+                <div class="form-group">
+                    <label for="username"><span class="required">*</span> 昵称:</label>
+                    <input type="text" id="username" placeholder="用于论坛显示 (3-20字符)" required minlength="3" maxlength="20" />
+                </div>
+                <div class="form-group">
+                    <label for="password"><span class="required">*</span> 密码:</label>
+                    <input type="password" id="password" placeholder="请输入密码" required />
+                </div>
+                <div class="form-group">
+                    <label for="invite-code">邀请码 (可选):</label>
+                    <input type="text" id="invite-code" placeholder="填写可获得会员等级" />
+                </div>
+                <button type="submit">注册</button>
+            </form>
+            <p>已有账户？<a href="login.html">立即登录</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 鋆赫财税. 保留所有权利。</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><a href="#"><i class="fab fa-qq"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.43.0/dist/umd/supabase.min.js" defer></script>
+    <script type="module" src="js/supabase-config.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/signup.js" defer></script>
+</body>
+</html>
